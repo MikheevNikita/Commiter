@@ -112,9 +112,7 @@ public class Imager {
         AffineTransform scaleTransform = AffineTransform.getScaleInstance(scaleX, scaleY);
         AffineTransformOp bilinearScaleOp = new AffineTransformOp(scaleTransform, AffineTransformOp.TYPE_BILINEAR);
 
-        return bilinearScaleOp.filter(
-                image,
-                new BufferedImage(width, height, image.getType()));
+        return bilinearScaleOp.filter(image, new BufferedImage(width, height, image.getType()));
     }
 
 }
